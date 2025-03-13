@@ -1,0 +1,220 @@
+// See https://aka.ms/new-console-template for more information
+#region TASK 1
+//Array verilir ve n ededi daxil olunur.
+//eger n ededi arrayin daxilindeki istenilen ededden boyukdurse true eks halda false qaytarsin.
+//int number = 10;
+//int[] arr = {1,2,3,4,5 };
+//bool isBig = true;
+//for (int i = 0; i < arr.Length; i++)
+//{
+//	if (arr[i] > number)
+//	{
+//		isBig = false;
+//		break;
+//	}
+//}
+//Console.WriteLine(isBig);
+#endregion
+#region TASK 2
+//array verilir, bu arrayin daxilindeki en boyuk ededi tapin.
+int[] numbers = { 1,2, 3,40, 4, 5, 20 };
+int maxNumber = 0;
+for (int i = 0; i < numbers.Length-1; i++)
+{
+    if (i < numbers.Length)
+    {
+        if (numbers[i] > numbers[i+1])
+        {
+            maxNumber = numbers[i];
+         }
+        
+    }
+}
+Console.WriteLine(maxNumber);
+#endregion
+#region TASK3
+//verilmis ededin polindrom eded olub-olmadigini tapin.
+//polindrom eded duz oxunusu ile ters oxunusu eyni olan ededlerdir. mes: 252, 121
+//int number = 121;
+//string changedNumber = number.ToString();
+//bool isPolindrom = false;
+//for (int i = 0; i < changedNumber.Length; i++)
+//{
+//    // 0  1  2
+//    // 2  1  0
+
+//    for (int j = changedNumber.Length - 1; j < changedNumber.Length; j--)
+//    { 
+//        if (changedNumber[i] != changedNumber[j])
+//        {
+//            Console.WriteLine("pilndrom deyil");
+//            break;
+//        }
+//        else
+//        {
+//            Console.WriteLine("polimderm");
+//        }
+
+//    }
+
+//}
+
+#endregion
+#region TASK 4
+// verilmis ededin faktorialini tapin!
+//int number = 5;
+//int factorial = 1;
+//for (int i = 1; i <=number; i++)
+//{
+//    factorial *= i;
+//}
+//Console.WriteLine($"{number} ededinin faktoriali {factorial}-dir");
+#endregion
+#region TASK5
+//usul 1:
+//verilmis ededin reqemlerinin hasilini tap
+//iki reqemli eded ucun:
+//int number = 52;
+//int teklik = number % 10;
+//int onluq = number / 10;
+//int hasil = teklik * onluq;
+
+//uc reqemli eded ucun:
+//int number = 512;
+//int teklik = number % 10;
+//int yuzluk = number / 100;
+//int onluq = (number % 100 - teklik)/10;
+//int hasil = teklik * onluq * yuzluk;
+//Console.WriteLine(hasil);
+
+//usul 2:
+//int number = 234;
+//int hasil = 1;
+//int changedNumber = 0;
+//for (int i = 0; i < number.ToString().Length; i++)
+//{
+//    changedNumber = int.Parse(number.ToString().ToString()[i]);
+//    hasil *= changedNumber;
+//}
+
+//Console.WriteLine(hasil);
+#endregion
+#region task 6
+//ededin sade yoxsa murekkeb oldugunu yoxla
+//Console.WriteLine("Ededi daxil edin:");
+//int number = Convert.ToInt32(Console.ReadLine());
+//bool isActive = false;
+//int[] sadeEdedler = { 2,3,5,7,11,13};
+
+//for (int i = 0; i < sadeEdedler.Length; i++)
+//{
+//	if (number % sadeEdedler[i] == 0 && number != sadeEdedler[i])
+//	{
+//		isActive = true;
+//		break;
+//	}
+
+//}
+
+//if (isActive)
+//{
+//	Console.WriteLine($"{number} ededi murekkebdir");
+//}
+//else
+//{
+//	Console.WriteLine($"{number} ededi sadedir.");
+//}
+#endregion
+#region TASK7
+//sozlerden ibaret arrayin icinden verilmis sozu tap
+
+//string word = "anar";
+//bool isFind = false;
+//string box = "bele eded tapilmadi";
+//string[] words = {"adil","anar","eli","nihat","veli" };
+//for (int i = 0; i < words.Length; i++)
+//{
+//    if (words[i] == word)
+//    {
+//        box = words[i];
+//        isFind = true;
+//        Console.WriteLine(box);
+//        break;
+//    }
+
+//}
+//if (!isFind)
+//{
+//    Console.WriteLine(box);
+//}
+#endregion
+#region TASK8
+//soz ve herf verilib,sozun icinde verilen herfin olub-olmadigini tapin.
+
+//char herf = 'b';
+//string word = "nihat";
+//bool isFind = false;
+//for (int i = 0; i < word.Length; i++)
+//{
+//	if (word[i] == herf)
+//	{
+//		isFind = true;
+//	}
+
+//}
+//if (isFind)
+//{
+//    Console.WriteLine($"{herf} herfi {word} sozunun icinde tapildi");
+//}
+//else
+//{
+//    Console.WriteLine($"{herf} herfi {word} sozunun daxilinde tapilmadi!");
+//}
+#endregion
+#region TASK9
+
+//string[] arr = {"tahiN "," ","vodemmeM"};
+// 0  1  2  3  4
+//4  3  2  1  0
+//(max-1) dusturu ile davam edir.
+
+//for (int i = 0; i < arr.Length; i++)
+////Bu for array-de dovr edir.
+//{
+//    for (int j = 0; j < arr[i].Length; j++)
+//	{
+//	//Bu for arrayin daxildeki sozun herflerini dovr edir.	
+//        for (int n = arr[i].Length - 1; n < arr[i].Length; n++)
+//        {
+//            //Burada ise sozun herfleri indekslerine gore yerini deyisir.
+//            Console.Write(arr[i][n - j]);
+//        }
+//    }
+
+//}
+
+#endregion
+#region TASK10
+//arrayin icerisindeki sozlerin sirasini tersine ceviren alqoritm
+string[] arr = { "nihat", "eli", "veli", "anar", "yusif", "xeyyam", "ruslan" };
+for (int i = 0; i < arr.Length; i++)
+{
+    //0  1  2  3
+    //3  2  1  0
+    Console.Write($"| {arr[i]} |");
+    for (int j = arr.Length - 1; j < arr.Length; j--)
+    {
+        if (j >= 0)
+        {
+            Console.Write($"| {arr[j - i]} |");
+            break;
+        }
+    }
+
+
+
+
+}
+
+
+#endregion
